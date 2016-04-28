@@ -36,10 +36,8 @@ class SearchController extends ControllerBase {
     $repos = $this->GitHubSearch->drupalRepositories();
 
     return [
-      '#type' => 'markup',
-      '#markup' => print_r($repos, true),
-      '#prefix' => '<pre>',
-      '#postfix' => '</pre>',
+      '#theme' => 'dogh_search_results',
+      '#repositories' => $repos,
     ];
   }
 

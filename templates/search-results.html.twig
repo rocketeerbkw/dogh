@@ -1,0 +1,6 @@
+<h2>Repositories</h2>
+<ul class="repositories">
+  {% for repo in repositories %}
+  <li><a href="{{ repo.html_url }}">{{ repo.full_name }}</a></li>
+  {% endfor %}
+</ul>

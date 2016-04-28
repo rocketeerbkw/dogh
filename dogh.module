@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function dogh_theme(&$existing, $type, $theme, $path) {
+  return [
+    'dogh_search_results' => [
+      'variables' => ['repositories' => NULL],
+      'template' => 'search-results'
+    ],
+  ];
+}
