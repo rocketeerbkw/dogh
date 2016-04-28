@@ -10,8 +10,23 @@
  */
 #}
 <h2>Repositories</h2>
-<ul class="repositories">
+<table class="repositories">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Stars</th>
+  </tr>
+  {% if repositories %}
   {% for repo in repositories %}
-  <li><a href="{{ repo.html_url }}">{{ repo.full_name }}</a></li>
+  <tr>
+    <td><a href="{{ repo.html_url }}">{{ repo.name }}</a></td>
+    <td>{{ repo.description }}</td>
+    <td>{{ repo.stargazers_count }}</td>
+  </tr>
   {% endfor %}
-</ul>
+  {% else %}
+  <tr>
+    <td colspan="3">No repositories found</td>
+  </tr>
+  {% endif %}
+</table>
