@@ -33,7 +33,7 @@ class SearchController extends ControllerBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('dogh.github_search')
+      $container->get('dogh.github_guzzle_search')
     );
   }
 

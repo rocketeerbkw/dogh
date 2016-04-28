@@ -2,4 +2,6 @@ services:
   dogh.github_search:
     class: Drupal\dogh\GitHubSearch
     arguments: []
-
+  dogh.github_guzzle_search:
+    class: Drupal\dogh\GitHubGuzzleSearch
+    arguments: ["@http_client"]
