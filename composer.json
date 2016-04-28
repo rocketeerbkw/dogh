@@ -10,5 +10,7 @@
     "issues": "https://github.com/rocketeerbkw/dogh/issues",
     "source": "https://github.com/rocketeerbkw/dogh"
   },
-  "require": { }
+  "require": {
+    "knplabs/github-api": "~1.6"
+  }
 }
