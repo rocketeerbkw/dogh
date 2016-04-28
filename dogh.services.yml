@@ -1,0 +1,5 @@
+services:
+  dogh.github_search:
+    class: Drupal\dogh\GitHubSearch
+    arguments: []
+
