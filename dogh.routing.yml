@@ -1,0 +1,17 @@
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev//search/drupal-on-github, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\dogh\Controller\SearchController")
+# and a method ("index").
+dogh.search_controller:
+  path: '/search/drupal-on-github'
+  defaults:
+    _controller: '\Drupal\dogh\Controller\SearchController::index'
+    _title: 'Drupal on GitHub'
+  requirements:
+    _permission: 'access content'
