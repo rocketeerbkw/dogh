@@ -2,10 +2,10 @@
 
 namespace Drupal\dogh;
 
-use \Github\Client as GitHub;
+use Github\Client as GitHub;
 
 /**
- * Class GitHubSearch.
+ * Uses the GitHub API to return information about Drupal related repositories.
  *
  * @package Drupal\dogh
  */
@@ -13,14 +13,15 @@ class GitHubSearch implements GitHubSearchInterface {
 
   private $GitHub;
 
-  function __construct() {
+  /**
+   * Constructor.
+   */
+  public function __construct() {
     $this->GitHub = new GitHub();
   }
 
   /**
-   * Return a list of github repositories related to Drupal.
-   *
-   * @return array
+   * {@inheritdoc}
    */
   public function drupalRepositories() {
     $repos = $this->GitHub->api('search')->repositories('drupal');
